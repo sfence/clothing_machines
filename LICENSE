@@ -1,0 +1,22 @@
+Clothing Machines
+==================================
+
+Source Code: SFENCE - LGPL v2.1
+
+Wool Textures: Based on minetest_game wool - CC BY-SA 3.0
+
+SFENCE - CC BY-SA 3.0:
+  clothing_machines_bone_needle.png
+  clothing_machines_spinning_machine_*.png
+  clothing_machines_sewing_table_*.png
+  clothing_machines_dye_machine_*.png
+  clothing_machines_dirty_water*.png - based on minetest_game default river_water textures
+  clothing_machines_bucket_dirty.png - based on minetest_game bucket river water texture
+  clothing_machines_loom_*.png -> based on old clothing:loom textures by Stuard jones.
+
+Sounds:
+
+ clothing_machines_spinning_machine_running.ogg -> based on kessir sound https://freesound.org/people/kessir/sounds/414554/, license CC BY 3.0
+ clothing_machines_dye_machine_running.ogg -> based on Woodylein sound https://freesound.org/people/Woodylein/sounds/213566/, license CC0 1.0
+ clothing_machines_loom_running.ogg -> based on snapcam sound https://freesound.org/people/snapcam/sounds/582994/, license CC0 1.0
+
