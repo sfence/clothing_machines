@@ -98,18 +98,16 @@ minetest.register_node("clothing_machines:dirty_water_flowing", {
 	sounds = adaptation.water_river.sounds,
 })
 
-local have_bucket = minetest.get_modpath("bucket") or minetest.get_modpath("hades_bucket")
-
-if have_bucket then
-  bucket.register_liquid(
+if adaptation.bucket_mod then
+  adaptation.bucket_mod.register_bucket(
     "clothing_machines:dirty_water_source",
     "clothing_machines:dirty_water_flowing",
     "clothing_machines:bucket_dirty_water",
     "clothing_machines_bucket_dirty_water.png",
-    S("Dirty Water Bucket").."\n"..
-    S("Put dirty water on gravel and wait for cleaning it."),
+    S("Dirty Water Bucket"),
     {tool = 1}
   )
+  appliances.add_item_help("clothing_machines:bucket_dirty_water", S("Put dirty water on gravel and wait for cleaning it."))
 end
 
 if adaptation.gravel and adaptation.water_river then

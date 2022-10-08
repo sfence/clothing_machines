@@ -5,7 +5,8 @@ local S = clothing_machines.translator;
 
 local adaptation = clothing_machines.adaptation
 
-if (not adaptation.wood) or (not adaptation.wool_mod) or (not adaptation.wool_white) or (not clothing_machines.tub_water_punch_items) then
+if (not adaptation_lib.check_keys_aviable("[clothing_machines] Wooden_tub: ", adaptation, {"wood", "wool_mod", "wool_white", "buckets_water"}))
+    or (not clothing_machines.tub_water_punch_items) then
   return
 end
 
@@ -80,9 +81,9 @@ for color, data in pairs(adaptation_lib.basic_colors) do
     local formspec =  "formspec_version[3]" .. "size[12.75,8.5]" ..
                       "background[-1.25,-1.25;15,10;appliances_appliance_formspec.png]" ..
                       progress..
-                      adaptation_lib.player.formspec_inv ..
-                      "list[context;"..self.input_stack..";2,0.8;1,1;]" ..
-                      "list[context;"..self.output_stack..";9.75,0.8;1,1;]" ..
+                      self:get_player_inv() ..
+                      self:get_formspec_list("context", self.input_stack, 2, 0.8, 1, 1)..
+                      self:get_formspec_list("context", self.output_stack, 9.75, 0.8, 1, 1)..
                       "listring[current_player;main]" ..
                       "listring[context;"..self.input_stack.."]" ..
                       "listring[current_player;main]" ..

@@ -8,7 +8,7 @@ adaptation.buckets_water = adaptation_lib.get_list("bucket_water")
 
 adaptation.wood = adaptation_lib.get_item({"wood_common"})
 adaptation.wood_jungle = adaptation_lib.get_item({"wood_jungle"})
-adaptation.wood_pine = adaptation_lib.get_item({"wood_pine", "wood_larch", "wood_violet"})
+adaptation.wood_pine = adaptation_lib.get_item({"wood_pine", "wood_larch", "wood_colored_violet"})
 
 adaptation.wool_white = adaptation_lib.get_item({"wool_raw", "wool_white"})
 
@@ -28,5 +28,6 @@ adaptation.group_bone = adaptation_lib.get_group("bone")
 
 -- mods
 adaptation.wool_mod = adaptation_lib.get_mod("wool")
+adaptation.bucket_mod = adaptation_lib.get_mod("bucket")
 
 
