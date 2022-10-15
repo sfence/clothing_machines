@@ -78,12 +78,12 @@ for color, data in pairs(adaptation_lib.basic_colors) do
               ":appliances_production_progress_bar_full.png^[transformR270]]";
     end
     
-    local formspec =  "formspec_version[3]" .. "size[12.75,8.5]" ..
+    local formspec =  "size[12.75,8.5]" ..
                       "background[-1.25,-1.25;15,10;appliances_appliance_formspec.png]" ..
                       progress..
                       self:get_player_inv() ..
                       self:get_formspec_list("context", self.input_stack, 2, 0.8, 1, 1)..
-                      self:get_formspec_list("context", self.output_stack, 9.75, 0.8, 1, 1)..
+                      self:get_formspec_list("context", self.output_stack, 9, 0.8, 1, 1)..
                       "listring[current_player;main]" ..
                       "listring[context;"..self.input_stack.."]" ..
                       "listring[current_player;main]" ..
@@ -127,9 +127,9 @@ for color, data in pairs(adaptation_lib.basic_colors) do
       self:deactivate(timer_step.pos, timer_step.meta);
       local node = minetest.get_node(timer_step.pos);
     
-      local formspec =  "formspec_version[3]" .. "size[12.75,8.5]" ..
+      local formspec =  "size[12.75,8.5]" ..
                         "background[-1.25,-1.25;15,10;appliances_appliance_formspec.png]" ..
-                        adaptation_lib.player.formspec_inv ..
+                        self:get_player_inv() ..
                         "list[context;"..self.output_stack..";6.0,0.8;1,1;]" ..
                         "listring[current_player;main]" ..
                         "listring[context;"..self.output_stack.."]";
